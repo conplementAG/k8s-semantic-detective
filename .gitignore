@@ -1,0 +1,7 @@
+# generated executable files
+cmd/**/*.exe
+cmd/**/semantic-detective
+cmd/semantic-detective/dist
+vendor
+.vscode
+.generated
