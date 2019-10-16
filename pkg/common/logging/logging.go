@@ -10,6 +10,14 @@ func InitializeSimpleFormat() {
 	log.SetFlags(0)
 }
 
+func Log(text string) {
+	log.Println(text)
+}
+
+func Logf(text string, v ...interface{}) {
+	log.Printf(text, v...)
+}
+
 func LogSuccess(text string) {
 	color.Set(color.FgGreen)
 	log.Println(text)

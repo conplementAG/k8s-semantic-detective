@@ -2,10 +2,10 @@
 
 
 [[projects]]
-  name = "github.com/briandowns/spinner"
-  packages = ["."]
-  revision = "88f696b7ffe4f9eec113a05508ecafd2b456190b"
-  version = "v1.7.0"
+  name = "github.com/beorn7/perks"
+  packages = ["quantile"]
+  revision = "37c8de3658fcb183f997c4e13e8337516ab753e6"
+  version = "v1.0.1"
 
 [[projects]]
   name = "github.com/fatih/color"
@@ -18,6 +18,12 @@
   packages = ["."]
   revision = "c2828203cd70a50dcccfb2761f8b1f8ceef9a8e9"
   version = "v1.4.7"
+
+[[projects]]
+  name = "github.com/golang/protobuf"
+  packages = ["proto"]
+  revision = "6c65a5562fc06764971b7c5d05c76c75e84bdbf7"
+  version = "v1.3.2"
 
 [[projects]]
   name = "github.com/hashicorp/hcl"
@@ -50,6 +56,12 @@
   version = "v0.0.10"
 
 [[projects]]
+  name = "github.com/matttproud/golang_protobuf_extensions"
+  packages = ["pbutil"]
+  revision = "c12348ce28de40eed0136aa2b644d0ee0650e56c"
+  version = "v1.0.1"
+
+[[projects]]
   name = "github.com/mitchellh/mapstructure"
   packages = ["."]
   revision = "3536a929edddb9a5b34bd6861dc4a9647cb459fe"
@@ -62,10 +74,28 @@
   version = "v1.5.0"
 
 [[projects]]
-  name = "github.com/rs/xid"
-  packages = ["."]
-  revision = "15d26544def341f036c5f8dca987a4cbe575032c"
-  version = "v1.2.1"
+  name = "github.com/prometheus/client_golang"
+  packages = ["prometheus","prometheus/internal","prometheus/promauto","prometheus/promhttp"]
+  revision = "170205fb58decfd011f1550d4cfb737230d7ae4f"
+  version = "v1.1.0"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/prometheus/client_model"
+  packages = ["go"]
+  revision = "14fe0d1b01d4d5fc031dd4bec1823bd3ebbe8016"
+
+[[projects]]
+  name = "github.com/prometheus/common"
+  packages = ["expfmt","internal/bitbucket.org/ww/goautoneg","model"]
+  revision = "287d3e634a1e550c9e463dd7e5a75a422c614505"
+  version = "v0.7.0"
+
+[[projects]]
+  name = "github.com/prometheus/procfs"
+  packages = [".","internal/fs","internal/util"]
+  revision = "499c85531f756d1129edd26485a5f73871eeb308"
+  version = "v0.0.5"
 
 [[projects]]
   name = "github.com/spf13/afero"
@@ -106,7 +136,7 @@
 [[projects]]
   branch = "master"
   name = "golang.org/x/sys"
-  packages = ["unix"]
+  packages = ["unix","windows"]
   revision = "b09406accb4736d857a32bf9444cd7edae2ffa79"
 
 [[projects]]
@@ -124,6 +154,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "714c301cb59c02c51601cb2a1cc444b07c1d409543004fa98fa0410f3d9e9634"
+  inputs-digest = "d42f2096345f2e30d692fe7ab15693e2a9c142955c5ff29baffe20de887144cc"
   solver-name = "gps-cdcl"
   solver-version = 1
