@@ -5,3 +5,4 @@ cmd/semantic-detective/dist
 vendor
 .vscode
 .generated
+.idea
