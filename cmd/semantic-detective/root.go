@@ -1,7 +1,6 @@
 package main
 
 import (
-	"github.com/conplementAG/k8s-semantic-detective/pkg/common/logging"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -12,13 +11,12 @@ var rootCmd = &cobra.Command{
 	Short: "semantic-detective - the Kubernetes developer tooling",
 	Long: `
 Kubernetes semantic detective is a microservice for executing continous 
-cluster semantic checks and exposing them in the Prometheus format for 
-monitoring / alerting integration.
+cluster semantic checks.
 	
-Version 0.0.1
+Version 0.1.0
     `,
 
-	Version: "0.0.1",
+	Version: "0.1.0",
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
@@ -30,14 +28,12 @@ func Execute() {
 }
 
 func init() {
-	logging.InitializeSimpleFormat()
-
 	cobra.OnInitialize(initConfig)
 
 	// Here you will define your flags and configuration settings.
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
-	rootCmd.AddCommand(createDetectCommand())
+	rootCmd.AddCommand(createProbeCommand())
 
 	rootCmd.PersistentFlags().BoolP("verbose", "v", false, "If set logging will be verbose")
 	viper.BindPFlag("verbose", rootCmd.PersistentFlags().Lookup("verbose"))

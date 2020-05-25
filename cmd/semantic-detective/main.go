@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/conplementAG/k8s-semantic-detective/pkg/common/logging"
 	"log"
 	"os"
 
@@ -10,6 +11,7 @@ import (
 func main() {
 	defer errorhandler()
 
+	logging.Initialize("semantic-detective.log")
 	Execute()
 }
 
@@ -19,7 +21,7 @@ func errorhandler() {
 	// errors)
 	if r := recover(); r != nil {
 		color.Set(color.FgHiRed)
-		log.Printf("copctl --- error occured: %+v\n", r)
+		log.Printf("k8s management detective -- error occured: %+v\n", r)
 		color.Unset()
 		os.Exit(1)
 	}
