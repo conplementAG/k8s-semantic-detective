@@ -10,7 +10,6 @@
 
 ```
 cd $GOPATH/src/github.com/conplementAG/k8s-semantic-detective
-dep ensure -v
 ```
 
 ### 2. Build

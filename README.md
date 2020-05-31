@@ -2,7 +2,9 @@
 
 ## Introduction
 
-k8s-semantic-detective - Kubernetes semantic detective is a microservice for executing continous cluster semantic checks and exposing them in the Prometheus format for monitoring / alerting integration.
+k8s-semantic-detective - Kubernetes semantic detective is a command line tool for executing semantic checks.
+
+To run continous checks we use [cloudprober](https://github.com/google/cloudprober) and run semantic detective as external probe.
 
 ## Contributing
 
