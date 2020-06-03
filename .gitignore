@@ -1,6 +1,6 @@
 # generated executable files
 cmd/**/*.exe
-cmd/**/semantic-detective
+cmd/**/*.log
 cmd/semantic-detective/dist
 vendor
 .vscode
